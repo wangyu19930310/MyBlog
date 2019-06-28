@@ -30,17 +30,17 @@ rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 2. 升级安装ELRepo
 rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 3. 载入elrepo-kernel元数据
-yum --disablerepo=\\* --enablerepo=elrepo-kernel repolist
+yum --disablerepo=\* --enablerepo=elrepo-kernel repolist
 4. 查看可用的rpm包
-yum --disablerepo=\\* --enablerepo=elrepo-kernel list kernel*Installed Packages
+yum --disablerepo=\* --enablerepo=elrepo-kernel list kernel*Installed Packages
 5. 安装最新版本的kernel
-yum --disablerepo=\\* --enablerepo=elrepo-kernel install  kernel-ml.x86_64  -y
+yum --disablerepo=\* --enablerepo=elrepo-kernel install  kernel-ml.x86_64  -y
 6. 删除旧版本工具包
 yum remove kernel-tools-libs.x86_64 kernel-tools.x86_64  -y
 7. 安装新版本工具包
-yum --disablerepo=\\* --enablerepo=elrepo-kernel install kernel-ml-tools.x86_64  -y
+yum --disablerepo=\* --enablerepo=elrepo-kernel install kernel-ml-tools.x86_64  -y
 8. 查看内核插入顺序
-awk -F \\' '$1=="menuentry " {print i++ " : " $2}' /etc/grub2.cfg
+awk -F \' '$1=="menuentry " {print i++ " : " $2}' /etc/grub2.cfg
 
 
 0 : CentOS Linux (4.20.12-1.el7.elrepo.x86_64) 7 (Core)
