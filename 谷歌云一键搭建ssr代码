@@ -1,0 +1,21 @@
+1.安装ssr
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+2. 如果wget发现报错command not found、是因为没有安装wget软件包
+yum -y install wget
+3.超级一键加速脚本，bbr 原版/魔改/plus/锐速 四合一
+
+wget "https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+4.测速
+#简略版
+yum install curl -y
+curl -LsO git.io/bench.sh; chmod +x bench.sh && ./bench.sh -a share
+#完整版
+yum install curl -y
+curl -LsO git.io/bench.sh; chmod +x bench.sh && ./bench.sh -a share
+5.测速
+我们购买vps后可能需要做些速度测试，你可以使用之前介绍过的秋水大佬的测速脚本来测试（脚本第一项就是测试cachefly下载），也可以使用speedtest来测。如果你有自己的镜像站的话直接拖镜像是个不错的选择，如果没有的话怎么能找个现成的文件来测试呢，这个时候就可以选择手动下载cachefly的测试文件来测试下载速度。常用的文件就是100mb.test，大小是100MB。
+wget http://cachefly.cachefly.net/100mb.test
+wget http://repos.mia.lax-noc.com/speedtests/1gb.bin 1G文件
+更多文件下载地址：http://repos.mia.lax-noc.com/speedtests/ 里面有最大100TB的文件
